@@ -1,5 +1,6 @@
 #!/bin/bash
 #in this script i want to send an alert to telegram channel.
+source ./.secrets
 LASTLINEFILE=/tmp/line
 LASTLINE=$(cat $LASTLINEFILE 2>dev/null || echo 0)
 CURRENTLINE=$(wc -l </var/log/auth.log)
